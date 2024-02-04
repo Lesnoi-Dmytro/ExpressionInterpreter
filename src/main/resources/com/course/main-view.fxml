@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.ComboBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+
+<AnchorPane fx:id="pane" prefHeight="835.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/17" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.course.MainController">
+   <children>
+      <TextField fx:id="in" prefHeight="25.0" prefWidth="540.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="55.0" />
+      <TextField fx:id="out" editable="false" prefHeight="25.0" prefWidth="540.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="125.0" />
+      <Label fx:id="inLabel" minHeight="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="20.0" />
+      <Label fx:id="outLabel" prefHeight="25.0" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="90.0" />
+      <ComboBox fx:id="type" onAction="#onSetType" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="170.0" />
+      <ComboBox fx:id="operations" onAction="#onSetOperation" prefHeight="25.0" prefWidth="170.0" AnchorPane.rightAnchor="220.0" AnchorPane.topAnchor="170.0" />
+      <Label layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="50.0" text="Variable" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="170.0" />
+      <TextField fx:id="variable" layoutX="10.0" layoutY="10.0" onAction="#setOperations" prefHeight="25.0" prefWidth="110.0" text="x" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="170.0" />
+      <Label prefWidth="50.0" text="Value" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="215.0" />
+      <TextField fx:id="value" layoutX="10.0" layoutY="10.0" prefHeight="25.0" prefWidth="110.0" text="0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="210.0" />
+      <Label prefWidth="50.0" text="Result" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="260.0" />
+      <TextField fx:id="result" editable="false" layoutX="20.0" layoutY="20.0" prefHeight="25.0" prefWidth="110.0" AnchorPane.leftAnchor="80.0" AnchorPane.topAnchor="255.0" />
+      <Label prefHeight="25.0" prefWidth="110.0" text="INF execution time:" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="215.0" />
+      <TextField fx:id="timeINF" editable="false" prefHeight="25.0" prefWidth="100.0" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="215.0" />
+      <Label prefHeight="25.0" prefWidth="110.0" text="PTF execution time:" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="260.0" />
+      <Button mnemonicParsing="false" onAction="#onCalculateClick" prefHeight="25.0" prefWidth="120.0" text="Calculate" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="215.0" />
+      <Button layoutX="10.0" layoutY="10.0" mnemonicParsing="false" onAction="#onCopyFunction" prefHeight="25.0" prefWidth="120.0" text="Copy Function" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="260.0" />
+      <TextField fx:id="timePTF" editable="false" prefHeight="25.0" prefWidth="100.0" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="260.0" />
+      <Label prefHeight="25.0" prefWidth="30.0" text="MinX" AnchorPane.leftAnchor="30.0" AnchorPane.topAnchor="305.0" />
+      <TextField fx:id="minX" onAction="#onBoundaryChange" prefHeight="25.0" prefWidth="60.0" text="-30" AnchorPane.leftAnchor="60.0" AnchorPane.topAnchor="305.0" />
+      <Label prefHeight="25.0" prefWidth="30.0" text="MaxX" AnchorPane.leftAnchor="180.0" AnchorPane.topAnchor="305.0" />
+      <TextField fx:id="maxX" onAction="#onBoundaryChange" prefHeight="25.0" prefWidth="60.0" text="30" AnchorPane.leftAnchor="210.0" AnchorPane.topAnchor="305.0" />
+      <Label prefHeight="25.0" prefWidth="30.0" text="MinY" AnchorPane.leftAnchor="330.0" AnchorPane.topAnchor="305.0" />
+      <TextField fx:id="minY" onAction="#onBoundaryChange" prefHeight="25.0" prefWidth="60.0" text="-30" AnchorPane.leftAnchor="360.0" AnchorPane.topAnchor="305.0" />
+      <Label prefHeight="25.0" prefWidth="40.0" text="MaxY" AnchorPane.leftAnchor="480.0" AnchorPane.topAnchor="305.0" />
+      <TextField fx:id="maxY" onAction="#onBoundaryChange" prefHeight="25.0" prefWidth="60.0" text="30" AnchorPane.rightAnchor="30.0" AnchorPane.topAnchor="305.0" />
+      <ImageView fx:id="plane" fitHeight="540.0" fitWidth="540.0" layoutX="23.0" layoutY="350.0" pickOnBounds="true" preserveRatio="true" />
+      <Label fx:id="coordinates" />
+   </children>
+</AnchorPane>
